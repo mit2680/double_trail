@@ -22,8 +22,6 @@ ProcessConfig = ANTLER
   Run = pShare             @ NewConsole = false
   Run = pHostInfo          @ NewConsole = false
   Run = uFldNodeBroker     @ NewConsole = false
-  Run = uFldMessageHandler @ NewConsole = false
-  Run = pOdometry          @ NewConsole = false
 }
 
 #ifdef XMODE SIM
