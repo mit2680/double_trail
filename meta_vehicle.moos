@@ -128,6 +128,11 @@ ProcessConfig = pMarinePIDV22
   CommsTick   = 2
   
   platform_type = kayak
+#ifdef VROLE chaser
+  platform_color = dodger_blue
+#elseifdef VROLE surveyor
+  platform_color = green
+	#endif
 }
 
 //--------------------------------------------------
