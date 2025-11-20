@@ -20,6 +20,7 @@ Behavior = BHV_Waypoint
 {
   name      = bhv_waypoint
   pwt       = 100	
+  perpetual = true
   condition = MODE==RETURNING
 	
       speed = 2.5
