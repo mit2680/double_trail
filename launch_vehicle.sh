@@ -69,7 +69,7 @@ for ARGI; do
 	echo "  --max_spd=<m/s>        Max Sim and Helm speed  "
 	echo "                                                 "
 	echo "Options (custom):                                "
-	echo "  --vrole=chaser,evader  Vehicle role            "
+	echo "  --vrole=<role>         surveyor or chaser      "
 	echo "  --trang=155            Trail Angle             "
 	exit 0
     elif [ "${ARGI//[^0-9]/}" = "$ARGI" -a "$TIME_WARP" = 1 ]; then 

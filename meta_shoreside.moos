@@ -82,34 +82,46 @@ ProcessConfig = pMarineViewer
   appcast_viewable        = true
   appcast_color_scheme    = indigo
 
-  scope = CONTACT_INFO
+	left_context[station]  = STATION_$[UP_VNAME_CLOSEST] = true
+	right_context[unstation] = STATION_$[UP_VNAME_CLOSEST] = false
+
+	scope = CONTACT_INFO
 
   action = STATION_ALL = false
   action = STATION_ALL = true
 
-  button_1 = DEPLOY  # DEPLOY_ALL=true 
+  button_1 = DEPLOY_ALL  # DEPLOY_ALL=true 
   button_1 = MOOS_MANUAL_OVERRIDE_ALL=false 
-  button_1 = RETURN_ALL=false 
-  button_1 = PATROL=true
+  button_1 = RETURN_ALL=false # STATION_ALL=false
 
-  button_2 = RETURN  # RETURN_ALL=true # PATROL=false
-  button_2 = PATROL=false # TRAIL=false
+  button_2 = RETURN_ALL  # RETURN_ALL=true 
+  button_2 = MOOS_MANUAL_OVERRIDE_ALL=false 
+  button_2 = RETURN_ALL=true # STATION_ALL=false
 
-  button_3 = TRAIL-YES # TRAIL_BEN=true # TRAIL_CAL=true
-  button_3 = STATION_BEN=false # STATION_CAL=false
+  button_3 = DEPLOY_ABE  # DEPLOY_ABE=true 
+  button_3 = MOOS_MANUAL_OVERRIDE_ABE=false 
+  button_3 = RETURN_ABE=false # STATION_ABE=false 
 
-  button_4 = TRAIL-NO # TRAIL_BEN=false   #TRAIL_CAL=false
-	button_4 = STATION_BEN=true # STATION_CAL=true
-	
-	button_5 = STA-CHASE:T # STATION_BEN=true 
-	button_5 = STATION_CAL=true 
-	button_5 = TRAIL_BEN=false
-	button_5 = TRAIL_CAL=false
+  button_5 = DEPLOY_BEN  # DEPLOY_BEN=true 
+  button_5 = MOOS_MANUAL_OVERRIDE_BEN=false 
+  button_6 = RETURN_BEN=false # STATION_BEN=false 
 
-	button_6 = STA-CHASE:F # STATION_BEN=false
-	button_6 = STATION_CAL=false
-	button_6 = TRAIL_BEN=true
-	button_6 = TRAIL_CAL=true
+  button_6 = DEPLOY_CAL  # DEPLOY_CAL=true 
+  button_6 = MOOS_MANUAL_OVERRIDE_CAL=false 
+  button_6 = RETURN_CAL=false # STATION_CAL=false 
+
+
+  button_7 = RETURN_ABE  # RETURN_ABE=true 
+  button_7 = MOOS_MANUAL_OVERRIDE_ABE=false 
+  button_7 = RETURN_ABE=true # STATION_ABE=false 
+
+  button_9 = RETURN_BEN  # RETURN_BEN=true 
+  button_9 = MOOS_MANUAL_OVERRIDE_BEN=false 
+  button_9 = RETURN_BEN=true # STATION_BEN=false 
+
+  button_10 = RETURN_CAL  # RETURN_CAL=true 
+  button_10 = MOOS_MANUAL_OVERRIDE_CAL=false 
+  button_10 = RETURN_CAL=true # STATION_CAL=false 
 }
 
 //--------------------------------------------------

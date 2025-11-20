@@ -94,7 +94,7 @@ VEHPOS=(`cat vpositions.txt`)
 SPEEDS=("2" "4")
 VNAMES=(`cat vnames.txt`)
 VCOLOR=(`cat vcolors.txt`)
-VROLES=("evader" "chaser" "chaser" "chaser")
+VROLES=("surveyor" "chaser" "chaser" "chaser")
 TRANGS=("1" "145" "215" "180")
 
 #------------------------------------------------------------
