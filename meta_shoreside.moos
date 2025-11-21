@@ -55,11 +55,10 @@ ProcessConfig = uFldNodeComms
   AppTick       = 2
   CommsTick     = 2
 
-           comms_range = 250
-        critical_range = 25
-      min_msg_interval = 20
-        max_msg_length = 1000
-                groups = true
+           comms_range = 25000
+        critical_range = 2500
+      min_msg_interval = 0
+        max_msg_length = 10000
   view_node_rpt_pulses = true
 }
 
@@ -76,7 +75,8 @@ ProcessConfig = pMarineViewer
   vehicles_shape_scale = 1.9
   vehicles_name_mode   = names
 
-
+	point_viewable_labels   = false
+	seglist_viewable_all    = false
 	polygon_viewable_labels = false
 	node_pulse_viewable_all = false
   appcast_viewable        = true
@@ -85,43 +85,32 @@ ProcessConfig = pMarineViewer
 	left_context[station]  = STATION_$[UP_VNAME_CLOSEST] = true
 	right_context[unstation] = STATION_$[UP_VNAME_CLOSEST] = false
 
-	scope = CONTACT_INFO
-
-  action = STATION_ALL = false
-  action = STATION_ALL = true
-
   button_1 = DEPLOY_ALL  # DEPLOY_ALL=true 
   button_1 = MOOS_MANUAL_OVERRIDE_ALL=false 
   button_1 = RETURN_ALL=false # STATION_ALL=false
+  button_1 = TRAIL_ALL=true
 
   button_2 = RETURN_ALL  # RETURN_ALL=true 
-  button_2 = MOOS_MANUAL_OVERRIDE_ALL=false 
-  button_2 = RETURN_ALL=true # STATION_ALL=false
+  button_2 = TRAIL_ALL=false
 
-  button_3 = DEPLOY_ABE  # DEPLOY_ABE=true 
-  button_3 = MOOS_MANUAL_OVERRIDE_ABE=false 
-  button_3 = RETURN_ABE=false # STATION_ABE=false 
+	button_3 = DEPLOY_CAL  # DEPLOY_CAL=true 
+  button_3 = RETURN_CAL=false # STATION_CAL=false 
+  button_3 = TRAIL_CAL=true
+
+  button_4 = RETURN_CAL  # RETURN_CAL=true 
+  button_4 = TRAIL_CAL=false
 
   button_5 = DEPLOY_BEN  # DEPLOY_BEN=true 
-  button_5 = MOOS_MANUAL_OVERRIDE_BEN=false 
-  button_6 = RETURN_BEN=false # STATION_BEN=false 
+  button_5 = RETURN_BEN=false # STATION_BEN=false 
+  button_5 = TRAIL_BEN=true
 
-  button_6 = DEPLOY_CAL  # DEPLOY_CAL=true 
-  button_6 = MOOS_MANUAL_OVERRIDE_CAL=false 
-  button_6 = RETURN_CAL=false # STATION_CAL=false 
+  button_6 = RETURN_BEN  # RETURN_BEN=true 
+  button_6 = TRAIL_BEN=false
 
+	button_7 = DEPLOY_ABE  # DEPLOY_ABE=true 
+  button_7 = RETURN_ABE=false # STATION_ABE=false 
 
-  button_7 = RETURN_ABE  # RETURN_ABE=true 
-  button_7 = MOOS_MANUAL_OVERRIDE_ABE=false 
-  button_7 = RETURN_ABE=true # STATION_ABE=false 
-
-  button_9 = RETURN_BEN  # RETURN_BEN=true 
-  button_9 = MOOS_MANUAL_OVERRIDE_BEN=false 
-  button_9 = RETURN_BEN=true # STATION_BEN=false 
-
-  button_10 = RETURN_CAL  # RETURN_CAL=true 
-  button_10 = MOOS_MANUAL_OVERRIDE_CAL=false 
-  button_10 = RETURN_CAL=true # STATION_CAL=false 
+  button_8 = RETURN_ABE  # RETURN_ABE=true 
 }
 
 //--------------------------------------------------

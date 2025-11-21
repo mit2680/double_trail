@@ -1,4 +1,4 @@
-//------x----------------------------------------
+//----------------------------------------------
 Behavior = BHV_StationKeep
 {
   name      = station
@@ -32,7 +32,7 @@ Behavior = BHV_AvoidCollision
 {
   name       = avd_collision
   pwt        = 400
-  condition  = (MODE == PATROLLING) or (MODE==TRAILING)
+  condition  = (MODE == RETURNING) or (MODE==TRAILING)
   updates    = CONTACT_INFO
   endflag    = CONTACT_RESOLVED = $[CONTACT],avd 
   templating = spawn

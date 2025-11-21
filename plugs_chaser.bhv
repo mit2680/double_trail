@@ -12,25 +12,31 @@ set MODE = ACTIVE {
 
 set MODE = RETURNING {
   MODE    = ACTIVE
-  STATION = false
   RETURN  = true
+} 
+
+set MODE = STATIONING {
+  MODE    = ACTIVE
+  STATION = true
 } 
 
 set MODE = TRAILING {
   MODE    = ACTIVE
   STATION = false
-//  TRAIL   = true
+  TRAIL   = true
 } STATIONING
 	
 	
 //----------------------------------------------
 Behavior = BHV_Trail
 {
-  name       = trail_contact
-  pwt        = 100
-  condition  = MODE == TRAILING
-  updates    = TRAIL_INFO
-//  templating = spawn
+  name      = trail_contact
+  pwt       = 100
+  condition = MODE == TRAILING
+  updates   = TRAIL_INFO
+
+	runflag   = CHASING=true
+	idleflag  = CHASING=false
 
               contact = abe
        pwt_outer_dist = 130
